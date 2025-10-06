@@ -126,9 +126,4 @@ Bee-yond Sights integrates multiple datasets via **Google Earth Engine (GEE)**:
 
 ---
 
-## Team Bee-yond Sights
-
-> Developed by a multidisciplinary team of biomedical, AI, and geospatial enthusiasts.  
-> Our mission: *To make Earth’s ecological intelligence accessible for everyone.*
-
 

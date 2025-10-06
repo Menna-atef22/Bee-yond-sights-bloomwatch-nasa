@@ -1,0 +1,58 @@
+.leaflet-container{
+    height: 100%;
+}
+.earthMap{
+    width: 80%;
+    height: 70vh;
+    margin: auto;
+    box-shadow:
+        0 8px 25px rgba(164, 28, 108, 0.2),
+        0 4px 12px rgba(164, 28, 108, 0.15);
+    border-radius: 1rem;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-content h2 {
+    color: black;
+    margin-top: 0;
+}
+
+.modal-content p {
+    color: black;
+    margin: 10px 0;
+}
+
+.close-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background: #0056b3;
+}

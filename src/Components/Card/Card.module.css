@@ -1,0 +1,316 @@
+.cardContainer{
+    position: relative;
+    background: #ffffff;
+    border-radius: 3rem;
+    width: 100%;
+    min-height: 480px;
+    border: 1px solid rgba(164, 28, 108, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.06),
+        0 8px 20px rgba(164, 28, 108, 0.04),
+        0 2px 8px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.cardContainer:hover {
+    border-color: rgba(164, 28, 108, 0.2);
+    box-shadow:
+        0 30px 60px rgba(164, 28, 108, 0.08),
+        0 15px 30px rgba(164, 28, 108, 0.12),
+        0 5px 15px rgba(0, 0, 0, 0.04);
+    transform: translateY(-12px) scale(1.02);
+}
+
+.cardImageContainer {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(164, 28, 108, 0.06);
+}
+
+.cardImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(1.02) contrast(1.05);
+}
+
+.imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(164, 28, 108, 0.05) 0%, rgba(160, 36, 131, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.cardContainer:hover .imageOverlay {
+    opacity: 1;
+}
+
+.cardContainer:hover .cardImage {
+    transform: scale(1.08);
+    filter: brightness(1.05) contrast(1.1);
+}
+
+.cardText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0 0.5rem;
+}
+
+.cardText h3{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 1.2rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.cardText p{
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a5568;
+    margin-bottom: 2.5rem;
+    flex-grow: 1;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+.learnMoreBtn {
+    background: linear-gradient(135deg, #A41C6C 0%, #A02483 100%);
+    border: none;
+    border-radius: 2.5rem;
+    padding: 1rem 2.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+        0 8px 25px rgba(164, 28, 108, 0.2),
+        0 4px 12px rgba(164, 28, 108, 0.15);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+    letter-spacing: 0.02em;
+}
+
+.learnMoreBtn:hover {
+    background: linear-gradient(135deg, #A02483 0%, #A41C6C 100%);
+    box-shadow:
+        0 12px 35px rgba(164, 28, 108, 0.3),
+        0 6px 18px rgba(164, 28, 108, 0.25);
+    transform: translateY(-2px);
+    padding: 1rem 3rem;
+}
+
+.arrow {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.learnMoreBtn:hover .arrow {
+    transform: translateX(6px);
+}
+
+.cardGlow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(164, 28, 108, 0.02) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.cardContainer:hover .cardGlow {
+    opacity: 1;
+    animation: pulse 2s infinite;
+}
+
+.pulseIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #A41C6C 0%, #A02483 100%);
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(164, 28, 108, 0.6);
+}
+
+/* Feature-specific animations */
+.satellite:hover .cardImage {
+    transform: scale(1.15) rotate(2deg);
+}
+
+.analytics:hover .cardImage {
+    transform: scale(1.05);
+    filter: brightness(1.1) contrast(1.2) hue-rotate(10deg);
+}
+
+.health:hover .cardImage {
+    transform: scale(1.08) rotate(2deg);
+    filter: brightness(1.15) contrast(1.1) saturate(1.2);
+}
+
+.climate:hover .cardImage {
+    transform: scale(1.1);
+    filter: brightness(1.1) contrast(1.15) sepia(0.1);
+}
+
+.storytelling:hover .cardImage {
+    transform: scale(1.12) rotateX(5deg);
+    filter: brightness(1.05) contrast(1.1);
+}
+
+/* Modern card design elements */
+.cardContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #A41C6C 0%, #A02483 100%);
+    border-radius: 3rem 3rem 0 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.cardContainer:hover::before {
+    opacity: 1;
+}
+
+.cardContainer::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(135deg, transparent 0%, rgba(164, 28, 108, 0.3) 50%, transparent 100%);
+    border-radius: 1px;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.cardContainer:hover::after {
+    opacity: 1;
+    width: 80%;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.6;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .cardContainer{
+        width: 100%;
+        min-height: 420px;
+        margin-bottom: 2.5rem;
+        padding: 2rem;
+        border-radius: 2.5rem;
+    }
+
+    .cardText h3{
+        font-size: 1.3rem;
+    }
+
+    .cardText p{
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .learnMoreBtn {
+        padding: 0.875rem 2rem;
+        font-size: 0.95rem;
+    }
+
+    .learnMoreBtn:hover {
+        padding: 0.875rem 2.5rem;
+    }
+
+    .pulseIcon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .cardImageContainer {
+        height: 180px;
+        border-radius: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardContainer{
+        width: 100%;
+        min-height: 380px;
+        padding: 1.75rem;
+        border-radius: 2rem;
+    }
+
+    .cardImageContainer {
+        height: 160px;
+        border-radius: 1.25rem;
+    }
+
+    .cardText h3{
+        font-size: 1.2rem;
+    }
+
+    .cardText p{
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+
+    .learnMoreBtn {
+        padding: 0.75rem 1.75rem;
+        font-size: 0.9rem;
+    }
+
+    .pulseIcon {
+        width: 25px;
+        height: 25px;
+    }
+}

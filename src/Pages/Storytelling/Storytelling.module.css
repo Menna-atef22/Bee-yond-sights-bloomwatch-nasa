@@ -1,0 +1,403 @@
+/* --- Landing Page --- */
+.landingContainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.landingBgImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    filter: blur(2px);
+}
+
+.landingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.landingTitle {
+    font-size: 5rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.landingSubtitle {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* --- Animated Pulse Dots --- */
+.pulseDot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 107, 107, 0.8); /* Pinkish pulse */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 3s infinite ease-out;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.8), 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* --- Location Buttons --- */
+.locationButton {
+    position: absolute; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    z-index: 10;
+}
+
+.locationButton .pin {
+    width: 24px;
+    height: 24px;
+    background-color: #ff6b6b; /* Main pink accent */
+    border-radius: 50% 50% 50% 0;
+    border: 2px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    animation: subtleBounce 2.5s infinite ease-in-out;
+}
+
+.locationButton span {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    white-space: nowrap;
+    transform-origin: bottom center;
+}
+
+.locationButton:hover .pin {
+    animation: none;
+    transform: rotate(-45deg) scale(1.3);
+}
+
+.locationButton:hover span {
+    transform: scale(1.1);
+    background-color: #ff6b6b;
+}
+
+@keyframes subtleBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+}
+
+
+/* --- Main Layout (Light Pinkish Theme) --- */
+.storyContainer {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: calc(var(--header-height));
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fff9f9; /* Very light pink background */
+    box-sizing: border-box;
+}
+
+.visualization {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdecec; /* Slightly darker pink for map panel */
+    transition: width 0.5s ease-in-out;
+}
+
+.visualization.narrow {
+    width: 60%;
+}
+
+.visualization.full {
+    width: 100%;
+}
+
+
+.narrative {
+    width: 40%;
+    height: calc(100% - var(--header-height));
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 3rem;
+    background: #ffffff; /* White narrative panel for contrast */
+    color: #4a4a4a; /* Dark grey text */
+    border-left: 1px solid #eee;
+
+    position: absolute;
+    top: var(--header-height);
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 2000;
+}
+
+.narrative.open {
+    transform: translateX(0);
+}
+
+/* --- UPDATED: Narrative Toggle Button --- */
+.narrativeToggle {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    z-index: 2001;
+    background-color: #ffebee !important;  /* Soft pink background */
+    color: #c62828; /* Darker pink text */
+    border: 1px solid #ffcdd2; /* Pink border */
+    font-weight: bold;
+    padding: 0.8rem 0.6rem;
+    border-radius: 8px 0 0 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.05);
+}
+
+.visualization.full .narrativeToggle {
+    right: 0;
+}
+
+.narrativeToggle:hover {
+    background-color: #ff6b6b; /* Stronger pink on hover */
+    color: #fa5c5c;;
+    border-color: #ff6b6b;
+}
+
+
+/* --- Loading Screen --- */
+.loadingScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.5rem;
+    color: #4a4a4a;
+    background-color: #fff9f9;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* --- Visualization Controls --- */
+.locationSelector {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.locationSelector select {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    color: #4a4a4a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.sliderContainer {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: 1000;
+}
+
+/* --- Narrative Section --- */
+.narrativeIntro {
+    text-align: center;
+    padding-bottom: 50vh;
+}
+.narrativeIntro h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+.narrativeIntro p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 500px;
+    margin: 1rem auto 0;
+}
+
+.storyStep {
+    min-height: 90vh;
+    opacity: 0.4;
+    transition: opacity 0.4s ease-in-out;
+    border-left: 3px solid #eee;
+    padding: 2rem 0 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.storyStep[data-inview='true'] {
+    opacity: 1;
+    border-left: 3px solid #ff8a80; /* Pinkish accent */
+}
+
+.textContainer h3 {
+    font-size: 1.8rem;
+    color: #222;
+    margin-top: 0;
+}
+
+.textContainer p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.chartWrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.chartContainer {
+    width: 100%;
+    height: 250px;
+}
+
+/* --- Animation & Variable Controls --- */
+.animationControls {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 0.5rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(8px);
+    border: 1px solid #eee;
+}
+
+/* --- UPDATED: Animation Button --- */
+.animationControls button {
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    border: none;
+    background-color: #ff8a80;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(255, 107, 107, 0.3);
+}
+
+.animationControls button:hover {
+    background-color: #ff6b6b;
+    transform: translateY(-1px);
+}
+
+.animationStatus {
+    color: #4a4a4a;
+    font-size: 0.9rem;
+    min-width: 150px;
+    text-align: center;
+}
+
+/* --- Pill-style Radio Buttons --- */
+.variableSelector {
+    display: flex;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 4px;
+}
+.variableSelector label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #555;
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.variableSelector input[type="radio"] {
+    display: none;
+}
+.variableSelector input[type="radio"]:checked + span {
+    color: #fff;
+}
+.variableSelector label:has(input:checked) {
+    background-color: #ff6b6b;
+}
+
+.speedControl {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a4a4a;
+    font-size: 0.85rem;
+}
+.speedControl input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 4px;
+    background: #ffcdd2; /* Light pink track */
+    border-radius: 2px;
+    outline: none;
+}
+.speedControl input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #ff6b6b; /* Pink thumb */
+    border-radius: 50%;
+    cursor: pointer;
+}
+.speedControl input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #ff6b6b;
+    border-radius: 50%;
+    cursor: pointer;
+}

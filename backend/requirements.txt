@@ -1,0 +1,8 @@
+flask
+flask-cors
+pandas
+numpy
+tensorflow
+joblib
+requests==2.31.0
+plotly

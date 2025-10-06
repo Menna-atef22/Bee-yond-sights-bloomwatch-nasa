@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --header-height: 70px;
+  --primary-color: #3c2b4c;
+  --secondary-color: #171628;
+  --accent-color: rgba(240, 255, 255, 0.45);
+  --text-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2d3748;
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 7px;
+  border: 2px solid #2d3748;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #747474 #302e38;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #171628 0%, #242335 100%);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: rgba(240, 255, 255, 0.7);
+}
+
+button {
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}

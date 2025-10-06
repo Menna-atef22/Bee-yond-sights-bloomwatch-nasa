@@ -1,0 +1,284 @@
+/* --- General Container Styles (Dark Theme) --- */
+.container {
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #171628 0%, #242335 100%);
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #a0aec0;
+    text-align: center;
+}
+
+/* --- Choice Screen --- */
+.choiceContainer {
+    width: 100%;
+    max-width: 1000px; /* Increased max-width for two cards */
+    text-align: center;
+}
+
+.choiceHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.mainTitle {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 15px rgba(164, 28, 108, 0.5);
+}
+
+.choiceCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for cards */
+    gap: 2rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.choiceCard {
+    background-color: rgba(45, 55, 72, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border: 1px solid rgba(164, 28, 108, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.choiceCard:hover {
+    transform: translateY(-10px);
+    border-color: rgba(164, 28, 108, 0.5);
+    box-shadow: 0 15px 35px rgba(164, 28, 108, 0.2);
+}
+
+.choiceIcon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.cardDescription {
+    color: #a0aec0;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Pushes button to the bottom */
+}
+
+.choiceButton {
+    background: linear-gradient(135deg, #A41C6C 0%, #A02483 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto; /* Aligns button at the bottom */
+}
+
+.choiceButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(164, 28, 108, 0.4);
+}
+
+/* --- Form & Results Containers --- */
+.formContainer,
+.resultsContainer {
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(45, 55, 72, 0.3);
+    border: 1px solid rgba(164, 28, 108, 0.2);
+    border-radius: 1.5rem;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+.formHeader,
+.resultsHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.formTitle {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(164, 28, 108, 0.4);
+}
+
+.backButton {
+    background: none;
+    border: none;
+    color: #a0aec0;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: color 0.3s;
+}
+
+.backButton:hover {
+    color: #fff;
+}
+
+/* --- Form Elements --- */
+.predictionForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.fieldset {
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.fieldset legend {
+    padding: 0 0.5rem;
+    color: #cbd5e0;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    margin-bottom: 0.5rem;
+    color: #a0aec0;
+    font-size: 0.9rem;
+}
+
+.formGroup input[type="number"],
+.formGroup input[type="date"] {
+    background-color: rgba(23, 22, 40, 0.5);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: #A41C6C;
+    box-shadow: 0 0 10px rgba(164, 28, 108, 0.5);
+}
+
+.categoricalGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.radioGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.radioGroup label {
+    color: #cbd5e0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.radioGroup input[type="radio"] {
+    accent-color: #A41C6C;
+}
+
+.submitButton {
+    align-self: center;
+    background: linear-gradient(135deg, #A41C6C 0%, #A02483 100%);
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submitButton:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(164, 28, 108, 0.4);
+}
+
+.submitButton:disabled {
+    background: #4a5568;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* --- Results Styles --- */
+.resultsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.resultCard {
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.resultCard h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    font-weight: normal;
+}
+
+.predictionValue {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.successCard {
+    background: linear-gradient(135deg, #2f855a, #276749);
+    box-shadow: 0 0 20px rgba(47, 133, 90, 0.5);
+}
+
+.moderateCard {
+    background: linear-gradient(135deg, #d69e2e, #b7791f);
+    box-shadow: 0 0 20px rgba(214, 158, 46, 0.5);
+}
+
+.diseasedCard, .errorCard {
+    background: linear-gradient(135deg, #c53030, #9b2c2c);
+    box-shadow: 0 0 20px rgba(197, 48, 48, 0.5);
+}

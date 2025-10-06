@@ -1,0 +1,113 @@
+/* --- Main Wrapper --- */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* --- Slider Track and Range --- */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: #e9ecef; /* Light grey for the full track */
+    border-radius: 3px;
+}
+
+.range {
+    position: absolute;
+    height: 100%;
+    background-color: #007bff; /* Bright blue for the selected range */
+    border-radius: 3px;
+}
+
+/* --- Range Input Styling --- */
+.thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    width: 100%;
+    height: 6px; /* Match the track height */
+    background: transparent; /* Make the default track invisible */
+    pointer-events: none; /* Let clicks pass through the track */
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Thumb Handle Styling (Chrome, Safari, Edge) --- */
+.thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #007bff; /* Bright blue thumb */
+    border: 3px solid #fff; /* White border to stand out */
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto; /* Capture mouse events on the thumb */
+    margin-top: -7px; /* Center the thumb on the track */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.thumb::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+.thumb::-webkit-slider-thumb:active {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+
+/* --- Thumb Handle Styling (Firefox) --- */
+.thumb::-moz-range-thumb {
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #007bff;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.thumb::-moz-range-thumb:hover {
+    transform: scale(1.1);
+}
+
+.thumb::-moz-range-thumb:active {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+
+/* --- Text Values Display --- */
+.values {
+    margin-top: 1rem;
+    color: #495057; /* Dark grey text */
+    font-size: 0.95rem;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 4px 12px;
+    border-radius: 15px;
+}
+
+.values span {
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* --- Loading State --- */
+.loading {
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+    padding: 1rem;
+}

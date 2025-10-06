@@ -1,0 +1,22 @@
+ tppe/* TypewriterText.css */
+.typewriter-container {
+  display: inline-block;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  background-color: white;
+  width: 2px;
+  height: 1em;
+  margin-left: 1px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}

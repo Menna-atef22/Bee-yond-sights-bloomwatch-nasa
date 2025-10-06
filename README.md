@@ -89,7 +89,7 @@ Bee-yond Sights integrates multiple datasets via **Google Earth Engine (GEE)**:
 
 ---
 <p align="center">
-  <img src="images/models.png" alt="Bee-yond Sights Banner" width="1000"/>
+  <img src="images/models.jpeg" alt="Bee-yond Sights Banner" width="1000"/>
 </p>
 
 

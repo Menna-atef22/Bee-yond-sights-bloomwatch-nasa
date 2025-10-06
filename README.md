@@ -1,6 +1,6 @@
 <!-- Banner / Cover Image -->
 <p align="center">
-  <img src="images/web.png" alt="Bee-yond Sights Banner" width="800"/>
+  <img src="images/web.png" alt="Bee-yond Sights Banner" width="1000"/>
 </p>
 
 <h1 align="center">🌍 Bee-yond Sights: BloomWatch</h1>
@@ -88,6 +88,10 @@ Bee-yond Sights integrates multiple datasets via **Google Earth Engine (GEE)**:
 - **Features:** Temperature, Rainfall, Humidity, Wind Speed, NDVI
 
 ---
+<p align="center">
+  <img src="images/models.png" alt="Bee-yond Sights Banner" width="1000"/>
+</p>
+
 
 ## 🛠️ Tech Stack
 

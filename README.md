@@ -7,12 +7,8 @@
 <h3 align="center">AI-Powered Earth Observation Platform for Global Flowering Phenology</h3>
 
 <p align="center">
-  <a href="https://github.com/your-github-username/bloomwatch-ai/stargazers">
-    <img src="https://img.shields.io/github/stars/your-github-username/bloomwatch-ai?style=social" alt="GitHub Stars"/>
-  </a>
-  <a href="https://github.com/your-github-username/bloomwatch-ai/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"/>
-  </a>
+
+
   <a href="https://bee-yond-sights-kappa.vercel.app/">
     <img src="https://img.shields.io/badge/Live%20Demo-Online-blue.svg" alt="Live Demo"/>
   </a>
@@ -20,7 +16,7 @@
 
 ---
 
-## 🧭 Overview
+## Overview
 
 **Bee-yond Sights** is an intelligent, multi-feature Earth observation platform designed to connect **Earth, Air, and Life** through data.  
 Built for the **NASA BloomWatch Challenge**, it transforms satellite observations from **NASA**, **ESA**, and other global sources into actionable insights about vegetation bloom events, crop health, and pollen risk across Africa — with future global scalability.
@@ -31,23 +27,23 @@ The system integrates **remote sensing**, **machine learning**, and **deep learn
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
-### 🛰️ 1. Africa Environmental Dashboard
+### 1. Africa Environmental Dashboard
 - Real-time overview of Africa’s vegetative health.  
 - Tracks **active bloom regions**, **rainfall anomalies**, and **climate correlations**.  
 - Acts as a “mission control center” for environmental monitoring.
 
-### 📊 2. Data Explorer
+### 2. Data Explorer
 - Deep analytical tool for **agriculture** and **pollen & health** datasets.  
 - Interactive maps, time-series charts, and region/date filters.  
 - Enables granular exploration of environmental and vegetation data.
 
-### 🌿 3. Storytelling — *A Planet’s Pulse*
+### 3. Storytelling — *A Planet’s Pulse*
 - Visual narrative that animates long-term climate impact on regions like **Brazil**, **Japan**, and **California**.  
 - Uses NDVI, temperature, and rainfall trends to tell data-driven stories about global change.
 
-### 🤖 4. Predictive AI Services
+### 4. Predictive AI Services
 - Direct interaction with trained AI models:
   - **Crop Health Prediction Model** – Forecasts bloom risk, crop stress, irrigation need, and yield potential.
   - **Pollen Risk LSTM Model** – Detects high pollen risk using deep learning on climate and vegetation sequences.  
@@ -55,7 +51,7 @@ The system integrates **remote sensing**, **machine learning**, and **deep learn
 
 ---
 
-## 🧩 Data Sources
+## Data Sources
 
 Bee-yond Sights integrates multiple datasets via **Google Earth Engine (GEE)**:
 
@@ -71,7 +67,7 @@ Bee-yond Sights integrates multiple datasets via **Google Earth Engine (GEE)**:
 
 ## 🧠 Artificial Intelligence Modules
 
-### 🌾 BloomWatch Agriculture Model
+### BloomWatch Agriculture Model
 - **Algorithm:** XGBoost (multi-output classifier)  
 - **Input Features:** Vegetation indices (NDVI, EVI, SAVI, NDWI), soil moisture, and climate metrics  
 - **Outputs:**  
@@ -85,7 +81,7 @@ Bee-yond Sights integrates multiple datasets via **Google Earth Engine (GEE)**:
 
 ---
 
-### 🌬️ Pollen Risk Deep Learning Model
+### Pollen Risk Deep Learning Model
 - **Architecture:** Conv1D + Bidirectional LSTM  
 - **Goal:** Predict pollen health risks using time-series environmental data  
 - **Accuracy:** ~95–96% test accuracy  
@@ -106,14 +102,14 @@ Bee-yond Sights integrates multiple datasets via **Google Earth Engine (GEE)**:
 
 ## 🌐 Future Roadmap
 
-- 🔄 **Automated GEE Data Ingestion:** Real-time data retrieval via authenticated user sessions  
-- 🧭 **CNN-based Bloom Detection:** Spatial analysis from Sentinel-2 imagery  
-- 📈 **3D Visualization Suite:** Integration with `deck.gl` for immersive data exploration  
-- 🌏 **Global Expansion:** Extend bloom and pollen prediction to other continents
+- **Automated GEE Data Ingestion:** Real-time data retrieval via authenticated user sessions  
+- **CNN-based Bloom Detection:** Spatial analysis from Sentinel-2 imagery  
+- **3D Visualization Suite:** Integration with `deck.gl` for immersive data exploration  
+- **Global Expansion:** Extend bloom and pollen prediction to other continents
 
 ---
 
-## 👥 Team Bee-yond Sights
+## Team Bee-yond Sights
 
 > Developed by a multidisciplinary team of biomedical, AI, and geospatial enthusiasts.  
 > Our mission: *To make Earth’s ecological intelligence accessible for everyone.*

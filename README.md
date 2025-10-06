@@ -1,6 +1,6 @@
 <!-- Banner / Cover Image -->
 <p align="center">
-  <img src="images/web.png" alt="Bee-yond Sights Banner" width="1000"/>
+  <img src="images/web2.png" alt="Bee-yond Sights Banner" width="1000"/>
 </p>
 
 <h1 align="center">🌍 Bee-yond Sights: BloomWatch</h1>
@@ -34,14 +34,27 @@ The system integrates **remote sensing**, **machine learning**, and **deep learn
 - Tracks **active bloom regions**, **rainfall anomalies**, and **climate correlations**.  
 - Acts as a “mission control center” for environmental monitoring.
 
+<p align="center">
+  <img src="images/models.jpeg" alt="Bee-yond Sights Banner" width="1000"/>
+</p>
+
 ### 2. Data Explorer
 - Deep analytical tool for **agriculture** and **pollen & health** datasets.  
 - Interactive maps, time-series charts, and region/date filters.  
 - Enables granular exploration of environmental and vegetation data.
 
+<p align="center">
+  <img src="images/models.jpeg" alt="Bee-yond Sights Banner" width="1000"/>
+</p>
+
 ### 3. Storytelling — *A Planet’s Pulse*
 - Visual narrative that animates long-term climate impact on regions like **Brazil**, **Japan**, and **California**.  
 - Uses NDVI, temperature, and rainfall trends to tell data-driven stories about global change.
+
+<p align="center">
+  <img src="images/models.jpeg" alt="Bee-yond Sights Banner" width="1000"/>
+</p>
+
 
 ### 4. Predictive AI Services
 - Direct interaction with trained AI models:
@@ -89,11 +102,11 @@ Bee-yond Sights integrates multiple datasets via **Google Earth Engine (GEE)**:
 
 ---
 <p align="center">
-  <img src="images/models.png" alt="Bee-yond Sights Banner" width="1000"/>
+  <img src="images/models.jpeg" alt="Bee-yond Sights Banner" width="1000"/>
 </p>
 
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category | Tools & Frameworks |
 |-----------|--------------------|
@@ -102,9 +115,9 @@ Bee-yond Sights integrates multiple datasets via **Google Earth Engine (GEE)**:
 | **Data Platform** | Google Earth Engine (GEE), NASA/ESA APIs |
 | **Deployment** | Vercel (Frontend), Google Drive / GEE for data |
 
----
+ ---
 
-## 🌐 Future Roadmap
+## Future Roadmap
 
 - **Automated GEE Data Ingestion:** Real-time data retrieval via authenticated user sessions  
 - **CNN-based Bloom Detection:** Spatial analysis from Sentinel-2 imagery  
@@ -118,9 +131,4 @@ Bee-yond Sights integrates multiple datasets via **Google Earth Engine (GEE)**:
 > Developed by a multidisciplinary team of biomedical, AI, and geospatial enthusiasts.  
 > Our mission: *To make Earth’s ecological intelligence accessible for everyone.*
 
----
-
-## 📜 Citation
-
-If you use this work or build upon it, please cite:
 

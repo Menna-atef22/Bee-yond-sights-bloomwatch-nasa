@@ -1,6 +1,6 @@
 <!-- Banner / Cover Image -->
 <p align="center">
-  <img src="images/web2.png" alt="Bee-yond Sights Banner" width="1000"/>
+  <img src="images/web.png" alt="Bee-yond Sights Banner" width="1000"/>
 </p>
 
 <h1 align="center">🌍 Bee-yond Sights: BloomWatch</h1>
@@ -127,3 +127,5 @@ Bee-yond Sights integrates multiple datasets via **Google Earth Engine (GEE)**:
 ---
 
 
+<h1 align="center"> Team Bee-yond Sights
+<h3 align="center"> Our mission 🌍: To make Earth’s ecological intelligence accessible for everyone.

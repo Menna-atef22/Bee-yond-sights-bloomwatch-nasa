@@ -93,18 +93,18 @@ Bee-yond Sights integrates multiple datasets via **Google Earth Engine (GEE)**:
 </p>
 
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-| Category | Tools & Frameworks |
-|-----------|--------------------|
-| **Frontend** | React.js, Tailwind CSS, Recharts, Mapbox |
-| **Backend / ML** | Python, TensorFlow, Scikit-learn, XGBoost |
-| **Data Platform** | Google Earth Engine (GEE), NASA/ESA APIs |
-| **Deployment** | Vercel (Frontend), Google Drive / GEE for data |
+         | Category | Tools & Frameworks |
+         |-----------|--------------------|
+         | **Frontend** | React.js, Tailwind CSS, Recharts, Mapbox |
+         | **Backend / ML** | Python, TensorFlow, Scikit-learn, XGBoost |
+         | **Data Platform** | Google Earth Engine (GEE), NASA/ESA APIs |
+         | **Deployment** | Vercel (Frontend), Google Drive / GEE for data |
 
----
+ ---
 
-## 🌐 Future Roadmap
+## Future Roadmap
 
 - **Automated GEE Data Ingestion:** Real-time data retrieval via authenticated user sessions  
 - **CNN-based Bloom Detection:** Spatial analysis from Sentinel-2 imagery  

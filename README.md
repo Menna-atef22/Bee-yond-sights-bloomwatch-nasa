@@ -1,12 +1,21 @@
 <!-- Banner / Cover Image -->
 <p align="center">
-  <img src="[https://your-image-link-here.png" alt="Bee-yond Sights Banner](https://drive.google.com/file/d/1E8piG_gbouvT_e29ieErIZblVjLOmLXL/view?usp=sharing)" width="800"/>
+  <img src="https://your-image-link-here.png" alt="Bee-yond Sights Banner" width="800"/>
 </p>
 
 <h1 align="center">🌍 Bee-yond Sights: BloomWatch</h1>
 <h3 align="center">AI-Powered Earth Observation Platform for Global Flowering Phenology</h3>
+
 <p align="center">
-  Developed for the <b>NASA Space Apps Challenge 2025</b> 🌸
+  <a href="https://github.com/your-github-username/bloomwatch-ai/stargazers">
+    <img src="https://img.shields.io/github/stars/your-github-username/bloomwatch-ai?style=social" alt="GitHub Stars"/>
+  </a>
+  <a href="https://github.com/your-github-username/bloomwatch-ai/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"/>
+  </a>
+  <a href="https://bee-yond-sights-kappa.vercel.app/">
+    <img src="https://img.shields.io/badge/Live%20Demo-Online-blue.svg" alt="Live Demo"/>
+  </a>
 </p>
 
 ---
@@ -72,7 +81,7 @@ Bee-yond Sights integrates multiple datasets via **Google Earth Engine (GEE)**:
 - **Accuracy:**  
   - Bloom Risk → 91.5%  
   - Crop Health → 94.7%  
-  - Irrigation Need → 98.8%
+  - Irrigation Need → 99.8%
 
 ---
 

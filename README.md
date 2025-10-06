@@ -1,6 +1,6 @@
 <!-- Banner / Cover Image -->
 <p align="center">
-  <img src="https://your-image-link-here.png" alt="Bee-yond Sights Banner" width="800"/>
+  <img src="images/web.png" alt="Bee-yond Sights Banner" width="800"/>
 </p>
 
 <h1 align="center">🌍 Bee-yond Sights: BloomWatch</h1>

@@ -35,7 +35,7 @@ The system integrates **remote sensing**, **machine learning**, and **deep learn
 - Acts as a “mission control center” for environmental monitoring.
 
 <p align="center">
-  <img src="images/models.jpeg" alt="Bee-yond Sights Banner" width="1000"/>
+  <img src="images/Dashboard.jpeg" alt="Bee-yond Sights Banner" width="1000"/>
 </p>
 
 ### 2. Data Explorer
@@ -44,7 +44,7 @@ The system integrates **remote sensing**, **machine learning**, and **deep learn
 - Enables granular exploration of environmental and vegetation data.
 
 <p align="center">
-  <img src="images/models.jpeg" alt="Bee-yond Sights Banner" width="1000"/>
+  <img src="images/Data Explorer.jpeg" alt="Bee-yond Sights Banner" width="1000"/>
 </p>
 
 ### 3. Storytelling — *A Planet’s Pulse*
@@ -52,7 +52,7 @@ The system integrates **remote sensing**, **machine learning**, and **deep learn
 - Uses NDVI, temperature, and rainfall trends to tell data-driven stories about global change.
 
 <p align="center">
-  <img src="images/models.jpeg" alt="Bee-yond Sights Banner" width="1000"/>
+  <img src="images/Storytelling.jpeg" alt="Bee-yond Sights Banner" width="1000"/>
 </p>
 
 
